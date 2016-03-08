@@ -1,3 +1,3 @@
 ( function( $ ) {
-	console.info('PORRA');
+	console.info('Init');
 } )( jQuery );

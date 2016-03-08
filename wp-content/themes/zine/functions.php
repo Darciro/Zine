@@ -114,6 +114,8 @@ add_action( 'widgets_init', 'zine_widgets_init' );
  * Enqueue scripts and styles.
  */
 function zine_scripts() {
+	wp_enqueue_style( 'google-fonts--raleway', 'https://fonts.googleapis.com/css?family=Raleway:400,300,500,600' );
+	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'zine-style', get_template_directory_uri() . '/assets/css/style.css' );
 
 	wp_enqueue_script( 'zine-scripts', get_template_directory_uri() . '/assets/js/dist/theme.js', array('jquery'), false, true );

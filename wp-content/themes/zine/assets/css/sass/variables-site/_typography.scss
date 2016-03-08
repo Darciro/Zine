@@ -1,5 +1,29 @@
-$font__main: sans-serif;
+/*@font-face {
+	font-family: 'bazar_medium';
+	src: url('../fonts/bazar-webfont.eot');
+	src: url('../fonts/bazar-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/bazar-webfont.woff2') format('woff2'),
+	url('../fonts/bazar-webfont.woff') format('woff'),
+	url('../fonts/bazar-webfont.ttf') format('truetype'),
+	url('../fonts/bazar-webfont.svg#bazarmedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
+
+@font-face {
+	font-family: 'BazarMedium';
+	src: url('../fonts/bazar-webfont.eot');
+	src: url('../fonts/bazar-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/bazar-webfont.woff') format('woff'),
+	url('../fonts/bazar-webfont.ttf') format('truetype'),
+	url('../fonts/bazar-webfont.svg#BazarMedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font__main: 'Raleway', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__bazar: "BazarMedium";
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;

@@ -9,7 +9,8 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: $color__background-body url(../img/bg-noise-30x30.png); /* Fallback for when there is no custom background color defined. */
+	position: relative;
 }
 
 blockquote, q {
@@ -36,3 +37,42 @@ img {
 }
 
 @import "tables";
+
+header{
+
+	&.site-header{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: $color__palette-primary;
+		height: 64px;
+	}
+
+	.site-branding{
+		float: left;
+
+		h1{
+			margin: 0;
+			line-height: 64px;
+			padding: 0 15px;
+			background: $color__background-body url(../img/bg-noise-30x30.png);
+			font-family: $font__bazar;
+			font-weight: normal;
+			text-transform: uppercase;
+
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+
+#content{
+	padding-top: 120px;
+}
+
+.logged-in.admin-bar{
+
+}

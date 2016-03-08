@@ -12,3 +12,17 @@ textarea {
 @import "headings";
 
 @import "copy";
+
+.font--bazar{
+	font-family: $font__bazar;
+}
+
+.entry-title,
+.widget-title{
+	@extend .font--bazar;
+	text-transform: uppercase;
+}
+
+.entry-title a{
+	text-decoration: none;
+}

@@ -1,3 +1,27 @@
+article.zine-posts{
+	background-color: #fff;
+	margin: 0 -15px 0;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+
+	.entry-thumb img{
+		width: 100%;
+		height: auto;
+	}
+
+	.entry-header,
+	.entry-content,
+	.entry-footer{
+		padding: 15px;
+	}
+
+	.entry-footer{
+		border-top: solid 1px #d9d9d8;
+		text-align: right;
+	}
+}
+
 .sticky {
 	display: block;
 }
@@ -17,7 +41,6 @@
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
