@@ -52,7 +52,7 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div>
 		<?php get_sidebar(); ?>
-	</div><!-- #primary -->
+	</div>
 
 <?php
 get_footer();

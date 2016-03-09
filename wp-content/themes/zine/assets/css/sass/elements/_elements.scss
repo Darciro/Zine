@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background: $color__background-body url(../img/bg-noise-30x30.png); /* Fallback for when there is no custom background color defined. */
+	background: $color__background-body url(../img/dist/bg-noise-30x30.png); /* Fallback for when there is no custom background color defined. */
 	position: relative;
 }
 
@@ -56,7 +56,7 @@ header{
 			margin: 0;
 			line-height: 64px;
 			padding: 0 15px;
-			background: $color__background-body url(../img/bg-noise-30x30.png);
+			background: $color__background-body url(../img/dist/bg-noise-30x30.png);
 			font-family: $font__bazar;
 			font-weight: normal;
 			text-transform: uppercase;
@@ -67,6 +67,24 @@ header{
 		}
 	}
 
+}
+
+.site-desc{
+	margin-bottom: 30px;
+	text-align: center;
+
+	h2{
+		margin: 0;
+		font-family: $font__bazar;
+		text-transform: uppercase;
+		font-size: 2em;
+		color: $color__palette-secondary;
+		line-height: 35px;
+	}
+
+	p{
+		margin: 0;
+	}
 }
 
 #content{

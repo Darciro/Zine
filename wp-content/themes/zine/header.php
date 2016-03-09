@@ -38,3 +38,9 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+		<?php if( is_home() ): ?>
+		<div class="site-desc container">
+			<h2>Zine Pirata</h2>
+			<p>Alguma descrição inteligente para o site</p>
+		</div>
+		<?php endif; ?>

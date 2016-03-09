@@ -56,19 +56,31 @@ function zine_entry_footer() {
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'zine' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'zine' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-		}
-	}
+		} ?>
+
+		<div class="share-rule">
+			<a class="share-rule--toggler" href="#"><i class="fa fa-share-alt"></i></a>
+			<ul>
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			</ul>
+		</div>
+
+	<?php }
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'zine' ), esc_html__( '1 Comment', 'zine' ), esc_html__( '% Comments', 'zine' ) );
+		// comments_popup_link( esc_html__( 'Leave a comment', 'zine' ), esc_html__( '1 Comment', 'zine' ), esc_html__( '% Comments', 'zine' ) );
+		comments_popup_link( '<i class="fa fa-comment-o"></i>', '<i class="fa fa-comment"></i>', '<i class="fa fa-comment"></i>' );
 		echo '</span>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'zine' ),
+			// esc_html__( 'Edit %s', 'zine' ),
+			'<i class="fa fa-pencil"></i>',
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',

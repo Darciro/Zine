@@ -3,6 +3,13 @@
 	margin: 0 (-$size__site-sidebar) 0 0;
 	width: $size__site-full;
 	padding: 0 75px 0 15px;
+
+	&.content-area--full{
+		padding: 0 15px;
+		.site-main{
+			margin: 0;
+		}
+	}
 }
 
 .site-main {
@@ -15,10 +22,7 @@
 		float: right;
 		overflow: hidden;
 		width: $size__site-sidebar;
-		background-color: #fff;
 		margin: 0 -15px 0;
-		box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-		-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
 	}
 }
 
@@ -27,4 +31,19 @@
 	width: $size__site-full;
 	background: $color__palette-primary;
 	padding: 50px 0;
+	text-align: center;
+	color: white;
+
+	h5{
+		color: #fff;
+		font-family: $font__bazar;
+		text-transform: uppercase;
+		font-size: 2em;
+		margin: 0;
+	}
+
+	a{
+		color: white !important;
+		text-decoration: none;
+	}
 }

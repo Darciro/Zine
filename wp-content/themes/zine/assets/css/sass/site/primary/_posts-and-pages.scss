@@ -1,4 +1,5 @@
-article.zine-posts{
+article.zine-posts,
+article.zine-pages{
 	background-color: #fff;
 	margin: 0 -15px 0;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -11,15 +12,27 @@ article.zine-posts{
 	}
 
 	.entry-header,
-	.entry-content,
 	.entry-footer{
 		padding: 15px;
+	}
+
+	.entry-content{
+		padding: 0 15px 15px;
 	}
 
 	.entry-footer{
 		border-top: solid 1px #d9d9d8;
 		text-align: right;
+
+		> span{
+			margin-right: 10px;
+			display: inline-block;
+		}
 	}
+}
+
+.entry-meta a{
+	text-decoration: none;
 }
 
 .sticky {
@@ -48,4 +61,44 @@ article.zine-posts{
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.share-rule{
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+
+	.share-rule--toggler{}
+
+	&:hover ul{
+		display: block;
+	}
+
+	ul{
+		position: absolute;
+		margin: 0;
+		padding: 5px;
+		list-style-type: none;
+		text-align: center;
+		bottom: 25px;
+		left: 0;
+		margin-left: -50%;
+		background: $color__palette-secondary;
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+		-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+		display: none;
+
+		li{
+			margin-bottom: 5px;
+
+			a{
+				color: white;
+				display: block;
+
+				&:hover{
+					color: $color__palette-support
+				}
+			}
+		}
+	}
 }

@@ -23,10 +23,6 @@ gulp.task('sass', function () {
 			.pipe(livereload());
 });
 
-// gulp.task('sass:watch', function () {
-// gulp.watch('./assets/css/sass/**/*.scss', ['sass']);
-// });
-
 gulp.task('js', function () {
 	gulp.src('./assets/js/src/*.js')
 			.pipe(plumber(plumberErrorHandler))
@@ -46,13 +42,13 @@ gulp.task('compress', function () {
 });
 
 gulp.task('img', function() {
-	gulp.src('./assets/img/*.{png,jpg,gif}')
+	gulp.src('./assets/img/src/*.{png,jpg,gif}')
 		.pipe(plumber(plumberErrorHandler))
 		.pipe(imagemin({
 			optimizationLevel: 7,
 			progressive: true
 		}))
-		.pipe(gulp.dest('./assets/img/'))
+		.pipe(gulp.dest('./assets/img/dist/'))
 		.pipe(livereload());
 });
 
