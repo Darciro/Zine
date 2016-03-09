@@ -1,3 +1,4 @@
 .DS_Store
 wp-content/themes/zine/node_modules/
 .idea
+wp-config.php
