@@ -44,9 +44,10 @@ header{
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 10;
 		width: 100%;
 		background: $color__palette-primary url(../img/dist/bg-straps.png);
-		height: 64px;
+		height: 80px;
 	}
 
 	.site-branding{
@@ -54,7 +55,7 @@ header{
 
 		h1{
 			margin: 0;
-			line-height: 64px;
+			line-height: 80px;
 			padding: 0 15px;
 			background: $color__background-body url(../img/dist/bg-noise-30x30.png);
 			font-family: $font__bazar;
@@ -89,8 +90,50 @@ header{
 
 #content{
 	padding-top: 120px;
+	position: relative;
 }
 
 .logged-in.admin-bar{
 
+}
+
+#share-ruler{
+	position: absolute;
+	left: 0;
+	top: 120px;
+	z-index: 10;
+
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		text-align: center;
+	}
+
+	a{
+		display: block;
+		color: white;
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		font-size: 25px;
+	}
+
+	a.facebook{
+		background: #3B5998;
+	}
+	a.twitter{
+		background: #00ACED;
+	}
+	a.google-plus{
+		background: #CB2027;
+	}
+	a.pinterest{
+		background: #DD4B39;
+	}
+	a.email{
+		background: #AAAAAA;
+	}
 }

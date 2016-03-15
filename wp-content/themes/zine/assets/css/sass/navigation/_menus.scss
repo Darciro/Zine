@@ -2,6 +2,7 @@
 	display: block;
 	float: right;
 	width: 80%;
+	margin-top: 20px;
 
 	ul {
 		display: none;
@@ -53,7 +54,7 @@
 	li {
 		position: relative;
 		display: inline-block;
-		line-height: 64px;
+		line-height: 60px;
 		padding: 0 15px;
 
 		&:hover > a,

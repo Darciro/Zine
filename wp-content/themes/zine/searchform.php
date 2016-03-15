@@ -5,7 +5,7 @@
 		</label>
 		<input type="search" name="s" class="form-control" placeholder="Pesquisar por...">
 		<span class="input-group-btn">
-			<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+			<button class="btn btn-default btn-primary" type="button"><i class="fa fa-search"></i></button>
 		</span>
 	</div>
 </form>

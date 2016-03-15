@@ -45,4 +45,19 @@ input[type="submit"] {
 	background-image: none;
 	border: 1px solid transparent;
 	border-radius: 4px;
+
+	&.btn-primary{
+		background-color: $color__palette-primary;
+		border-color: $color__palette-primary;
+		box-shadow: none;
+
+		i{
+			color: white;
+		}
+
+		&:hover{
+			background-color: $color__palette-support;
+			border-color: $color__palette-support;
+		}
+	}
 }

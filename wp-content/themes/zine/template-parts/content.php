@@ -48,3 +48,11 @@
 		<?php zine_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
+<?php
+
+if( is_single() ){
+	require get_template_directory() . '/inc/share-ruler.php';
+}
+
+?>
