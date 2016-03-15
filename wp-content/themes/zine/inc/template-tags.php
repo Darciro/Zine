@@ -61,9 +61,9 @@ function zine_entry_footer() {
 		<div class="share-rule">
 			<a class="share-rule--toggler" href="#"><i class="fa fa-share-alt"></i></a>
 			<ul>
-				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 			</ul>
 		</div>
 
@@ -72,7 +72,8 @@ function zine_entry_footer() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		// comments_popup_link( esc_html__( 'Leave a comment', 'zine' ), esc_html__( '1 Comment', 'zine' ), esc_html__( '% Comments', 'zine' ) );
-		comments_popup_link( '<i class="fa fa-comment-o"></i>', '<i class="fa fa-comment"></i>', '<i class="fa fa-comment"></i>' );
+		// comments_popup_link( '<i class="fa fa-comment-o"></i>', '<i class="fa fa-comment"></i>', '<i class="fa fa-comment"></i>' );
+		echo '<a href="'. get_the_permalink() .'#disqus_thread"><i class="fa fa-comment"></i></a>';
 		echo '</span>';
 	}
 
