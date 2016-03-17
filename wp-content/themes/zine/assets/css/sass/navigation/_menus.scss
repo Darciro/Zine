@@ -1,3 +1,21 @@
+.menu-toggle{
+	float: right;
+	border: none;
+	border-radius: 0;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 20px;
+	background: #C83B3B;
+	text-shadow: none;
+	box-shadow: none;
+	color: #fff;
+
+	&:hover{
+		box-shadow: none;
+		border: none;
+	}
+}
+
 .main-navigation {
 	display: block;
 	float: right;
@@ -80,6 +98,16 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.main-navigation.toggled ul{
+	margin-top: 10px;
+	padding-top: 60px;
+	background: $color__palette-primary;
+
+	li{
+		display: block;
+	}
 }
 
 @media screen and (min-width: 37.5em) {

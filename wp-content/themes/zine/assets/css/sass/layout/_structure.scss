@@ -23,6 +23,21 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.content-area{
+		padding: 0 15px !important;
+		margin: 0;
+
+		.site-main{ margin: 0; }
+	}
+
+	.site-content .widget-area{
+		float: none !important;
+		width: 100% !important;
+		margin: 0 !important;
+	}
+}
+
 .container-fluid {
 	padding-right: 15px;
 	padding-left: 15px;

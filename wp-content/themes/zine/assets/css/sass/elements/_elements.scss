@@ -119,21 +119,36 @@ header{
 		width: 50px;
 		line-height: 50px;
 		font-size: 25px;
+		-webkit-transition: all 0.15s linear;
+		-moz-transition: all 0.15s linear;
+		-ms-transition: all 0.15s linear;
+		-o-transition: all 0.15s linear;
+		transition: all 0.15s linear;
+
+		&:hover{
+			width: 60px;
+			padding-left: 10px;
+		}
 	}
 
 	a.facebook{
 		background: #3B5998;
+		&:hover{ background: darken(#3B5998, 10%); }
 	}
 	a.twitter{
 		background: #00ACED;
+		&:hover{ background: darken(#00ACED, 10%); }
 	}
 	a.google-plus{
 		background: #CB2027;
+		&:hover{ background: darken(#CB2027, 10%); }
 	}
 	a.pinterest{
 		background: #DD4B39;
+		&:hover{ background: darken(#DD4B39, 10%); }
 	}
 	a.email{
 		background: #AAAAAA;
+		&:hover{ background: darken(#AAAAAA, 10%); }
 	}
 }

@@ -159,15 +159,20 @@ require get_template_directory() . '/inc/jetpack.php';
  * @param string $more "Read more" excerpt string.
  * @return string (Maybe) modified "read more" excerpt string.
  */
-function wpdocs_excerpt_more( $more ) {
-	return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+function zine_excerpt_more( $more ) {
+	return sprintf( '<p><a class="read-more" href="%1$s"><i class="fa fa-plus"></i> %2$s</a><p>',
 		get_permalink( get_the_ID() ),
-		__( 'Read More', 'textdomain' )
+		__( 'Continue lendo', 'textdomain' )
 	);
 }
-// add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+add_filter( 'excerpt_more', 'zine_excerpt_more' );
 
 function wpdocs_custom_excerpt_length( $length ) {
 	return 20;
 }
 // add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function disqus_count($disqus_shortname) {
+	wp_enqueue_script('disqus_count','http://'.$disqus_shortname.'.disqus.com/count.js');
+	echo '<a href="' . get_permalink() . '#disqus_thread"></a>';
+}
