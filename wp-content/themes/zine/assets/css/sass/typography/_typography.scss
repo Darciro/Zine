@@ -33,6 +33,10 @@ textarea {
 	a{
 		text-decoration: none;
 	}
+
+	&.entry-title--quoted{
+		font-style: italic;
+	}
 }
 
 .read-more{
