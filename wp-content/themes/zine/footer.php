@@ -16,11 +16,15 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
 			<h5>Zine Pirata</h5>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zine' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'zine' ), 'WordPress' ); ?></a><br/>
-			<a href="http://galdar.com.br/" rel="designer" target="_blank">Ricardo Carvalho</a>
+			Criado orgulhosamente com <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zine' ) ); ?>" class="underlined" target="_blank">WordPress</a><br/>
+			desenvolvido por <a href="http://galdar.com.br/" rel="designer" target="_blank" class="underlined">Ricardo Carvalho</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+<div id="back_to_top">
+	<a href="#"><i class="fa fa-angle-double-up"></i></a>
+</div>
 
 <?php wp_footer(); ?>
 

@@ -14,7 +14,7 @@ if ( ! function_exists( 'zine_posted_on' ) ) :
 function zine_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -26,7 +26,7 @@ function zine_posted_on() {
 
 	$posted_on = sprintf(
 		esc_html_x( '%s', 'post date', 'zine' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<i class="fa fa-calendar"></i><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
@@ -34,7 +34,17 @@ function zine_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span> <span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+	// Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'zine' ) );
+		if ( $categories_list && zine_categorized_blog() ) {
+			printf( '<span class="cat-links"><i class="fa fa-folder-o"></i>' . esc_html__( '%1$s', 'zine' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		}
+
+ 	}
 
 }
 endif;
@@ -44,20 +54,12 @@ if ( ! function_exists( 'zine_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function zine_entry_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'zine' ) );
-		if ( $categories_list && zine_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'zine' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
-
+		if ( 'post' === get_post_type() ):
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'zine' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'zine' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links"><i class="fa fa-tags"></i>' . esc_html__( '%1$s', 'zine' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		} ?>
-
 		<div class="quick-share">
 			<a class="quick-share--toggler" href="#"><i class="fa fa-share-alt"></i></a>
 			<ul>
@@ -66,10 +68,9 @@ function zine_entry_footer() {
 				<li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 			</ul>
 		</div>
+		<?php endif;
 
-	<?php }
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		disqus_count('calvinx');
 		echo '<span class="comments-link--zine">';
 		// comments_popup_link( esc_html__( 'Leave a comment', 'zine' ), esc_html__( '1 Comment', 'zine' ), esc_html__( '% Comments', 'zine' ) );

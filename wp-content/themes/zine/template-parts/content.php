@@ -11,9 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('zine-posts'); ?>>
 	<div class="entry-thumb">
-		<?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-		} ?>
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a href="<?php echo esc_url( get_permalink() ); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
+		<?php } ?>
 	</div>
 	<header class="entry-header">
 		<?php if ( 'post' === get_post_type() ) : ?>

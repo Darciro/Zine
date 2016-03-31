@@ -41,7 +41,14 @@ get_header(); ?>
 
 				endwhile;
 
-				the_posts_navigation();
+				echo '<div class="post-nav-wrapper">';
+
+				the_posts_navigation(array(
+					'prev_text' => '<i class="fa fa-angle-double-left"></i> Publicações mais antigas',
+					'next_text' => 'Publicações mais novas <i class="fa fa-angle-double-right"></i>'
+				));
+
+				echo '</div>';
 
 			else :
 

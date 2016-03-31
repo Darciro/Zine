@@ -23,3 +23,20 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+.follow-me-list{
+	padding: 0 !important;
+	margin: 0;
+	list-style-type: none;
+	text-align: center;
+
+	li{
+		display: inline-block;
+
+		a{
+			display: block;
+			height: 24px;
+			width: 24px;
+		}
+	}
+}

@@ -17,17 +17,18 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/src/pace.min.js"></script>
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('loading'); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'zine' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">PZ</a></h1>
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -40,7 +41,7 @@
 	<div id="content" class="site-content">
 		<?php if( is_home() ): ?>
 		<div class="site-desc container">
-			<h2>Zine Pirata</h2>
-			<p>Alguma descrição inteligente para o site</p>
+			<h2><?php echo bloginfo('name') ?></h2>
+			<p><?php echo bloginfo('description') ?></p>
 		</div>
 		<?php endif; ?>
