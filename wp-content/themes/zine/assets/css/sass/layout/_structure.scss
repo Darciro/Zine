@@ -38,6 +38,19 @@
 	}
 }
 
+@media (max-width: 480px) {
+	.main-navigation {
+		display: block !important;;
+		float: none !important;;
+		width: 100% !important;;
+		margin-top: 0 !important;;
+		position: absolute;
+		top: -10px;
+		right: 0;
+		padding: 25px 15px 0 15px;
+	}
+}
+
 .container-fluid {
 	padding-right: 15px;
 	padding-left: 15px;
